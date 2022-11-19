@@ -80,10 +80,55 @@ function litres(time) {
   }
 
 
+// Convert a String to a Number!
+
+const stringToNumber = function(str){
+    return Number(str);
+}
+
+//  Basic Mathematical Operations
+
+  function basicOp(operation, value1, value2){
+    let result = 0;
+    if (operation == "+"){
+      result = value1 + value2
+    } else if (operation == "-"){
+      result = value1 - value2
+    } else if (operation == "*"){
+      result = value1 * value2
+    } else if (operation == "/"){
+      result = value1 / value2
+    }
+    return result
+  }
 
 
+// Beginner - Lost Without a Map - deceptively hard
+
+function maps(x){
+  const y = [];
+  for(i = 0; i < x.length; i++){
+    y.push(x[i]*2);
+  };
+  return y
+}
 
 
+/////////////////////////////
+  //Kyu 7
+/////////////////////////////
+
+//Descending Order
+
+function descendingOrder(n){
+  let sortArray = String(n).split('').sort().reverse();
+  let highNumber = "";
+  sortArray.forEach( x => highNumber += x);
+  return Number(highNumber)
+}
+
+
+//
 
 
 
