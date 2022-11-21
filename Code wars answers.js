@@ -130,14 +130,43 @@ function descendingOrder(n){
 
 //Growth of a Population
 
+
+
 function nbYear(p0, percent, aug, p) {
   let n = 0;
   while (p0 < p){
-    p0 = p0 * percent / 100 + aug;
+    p0 += Math.floor(p0 * percent / 100 + aug);
     n++
   };
 return n
 }
+
+
+//Two to One
+
+function longest(s1, s2) {
+  let fullString = Array.from(s1 + s2).sort();
+  let i = 0;
+  while (i < fullString.length){
+    if (fullString[i] == fullString[i + 1]){
+    fullString.splice(i, 1)
+      } else {
+        i++
+      }
+  };
+  return fullString.join('');
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
