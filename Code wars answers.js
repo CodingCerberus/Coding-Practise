@@ -171,9 +171,52 @@ function longest(s1, s2) {
 
 
 
+function accum(s) {
+	let newString = [];
+  for (i = 0; i < accum.length; i++){
+    newString.push(accum[i].toLowerCase());
+    };
+    newString.forEach((x)=>{
+      x = x.repeat(i+1);
+      x[i][0] = x[i][0].toUpperCase;
+    });
+     
+  return newString.join('-')
+}
 
 
 
+
+
+
+function accum(s) {
+	let newString = [];
+  for (i = 0; i < accum.length; i++){
+    newString.push(accum[i].toLowerCase());
+    };
+     
+  return newString.join('-')
+}
+
+accum(ZpglnRxqenU)
+
+
+
+
+
+
+function accum(s) {
+	let newString = [];
+  for (i = 0; i < s.length; i++){
+    newString.push(s[i].toLowerCase());
+    };
+    newString.forEach((x)=>{
+      x = x.repeat(3);
+      x[0] = x[0].toUpperCase;
+    });
+     
+  return newString.join('-')
+}
 
 
 
