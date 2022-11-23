@@ -159,74 +159,53 @@ function longest(s1, s2) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//Mumbling
 
 function accum(s) {
 	let newString = [];
-  for (i = 0; i < accum.length; i++){
-    newString.push(accum[i].toLowerCase());
+  let finishString = []
+  for (i = 0; i < s.length; i++){
+    newString.push(s[i].toLowerCase());
+    newString[i] = newString[i].repeat(i+1);
+    finishString.push(newString[i].charAt(0).toUpperCase() + newString[i].slice(1));
     };
-    newString.forEach((x)=>{
-      x = x.repeat(i+1);
-      x[i][0] = x[i][0].toUpperCase;
-    });
      
-  return newString.join('-')
+  return finishString.join('-')
 }
 
 
-
-
-
-
 function accum(s) {
 	let newString = [];
-  for (i = 0; i < accum.length; i++){
-    newString.push(accum[i].toLowerCase());
-    };
-     
-  return newString.join('-')
-}
-
-accum(ZpglnRxqenU)
-
-
-
-
-
-
-function accum(s) {
-	let newString = [];
+  let finishString = []
   for (i = 0; i < s.length; i++){
     newString.push(s[i].toLowerCase());
     };
-    newString.forEach((x)=>{
-      x = x.repeat(3);
-      x[0] = x[0].toUpperCase;
-    });
+  for (i = 0; i < s.length; i++){
+    newString[i] = newString[i].repeat(i+1)
+  };
+  for (i = 0; i < s.length; i++){
+    finishString.push(newString[i].charAt(0).toUpperCase() + newString[i].slice(1))
+  }
      
-  return newString.join('-')
+  return finishString.join('-')
 }
 
 
 
 
+//Categorize New Member
 
-
-
-
-
-
+function openOrSenior(data){
+  let outputA = [];
+  for (i = 0; i < data.length; i++){
+    if((data[i][0] >= 55) && (data[i][1] > 7)){
+      outputA.push("Senior")
+    } else {
+      outputA.push("Open")
+    }
+  }
+  return outputA
+}
 
 
 
