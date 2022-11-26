@@ -152,7 +152,35 @@ function countBy(x, n) {
   return z;
 }
 
+//Opposite number
 
+function opposite(number) {
+  return -number
+}
+
+//Convert a string to an array
+
+function stringToArray(string){
+  return string.split(' ');
+}
+
+
+//Grasshopper - Grade book
+
+function getGrade (s1, s2, s3) {
+  let averageG = (s1 + s2 + s3)/3;
+  if (averageG < 60){
+    return "F"
+  } else if (averageG < 70){
+    return "D"
+  } else if (averageG < 80){
+    return "C"
+  } else if (averageG < 90){
+    return "B"
+  } else if (averageG <= 100){
+    return "A"
+  }
+}
 
 /////////////////////////////
   //Kyu 7
@@ -277,21 +305,25 @@ function highAndLow(numbers){
 }
 
 
+//Square Every Digit
 
+function squareDigits(num){
+  num = String(num);
+  num = num.split("");
+  for (i = 0; i < num.length; i++){
+    num[i] = Number(num[i]) * Number(num[i])
+  }
+  return Number(num.join(""));
+}
 
+//The highest profit wins!
 
-
-
-
-
-
-
-
-
-
-
-
-
+function minMax(arr){
+  let profitArr = []
+  profitArr.push(Math.min(...arr));
+  profitArr.push(Math.max(...arr));
+  return profitArr
+}
 
 
 
