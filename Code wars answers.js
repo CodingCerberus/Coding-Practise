@@ -182,6 +182,14 @@ function getGrade (s1, s2, s3) {
   }
 }
 
+
+//Invert values
+
+function invert(array) {
+  let invertArr = array.map(x => x * -1)
+   return invertArr;
+}
+
 /////////////////////////////
   //Kyu 7
 /////////////////////////////
@@ -326,25 +334,55 @@ function minMax(arr){
 }
 
 
+//Number of People in the Bus
+
+var number = function(busStops){
+  let people = 0;
+  for (i = 0; i < busStops.length; i++){
+    people += busStops[i][0];
+    people -= busStops[i][1]
+  }
+  return people
+}
 
 
+//Reverse words
+
+function reverseWords(str) {
+  let arr = str.split(' ');
+  for (i = 0; i < arr.length; i++){
+    let stringHolder = []
+    for (a = 0; a < arr[i].length; a++){
+      stringHolder.unshift(arr[i][a]);
+    }
+    arr[i] = stringHolder.join('')
+  }
+  return arr.join(' ')
+}
 
 
+//Kyu 6
 
+//Counting Duplicates
 
+//first attempt, did not account for multiple of same letters in string
+function duplicateCount(text){
+  let maxC = text.length;
+  text = text.toLowerCase();
+  let arr = new Set(text);
+  return maxC - arr.size
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function duplicateCount(text){
+  text = text.toLowerCase().split('').sort();
+  let dupeCount = 0;
+  for (i = 0; i < text.length; i++){
+    if (text[i] == text[i+1]){
+      dupeCount++;
+      while (text[i] == text[i+1]){
+        text.splice(text[i+1], 1)
+      }
+    }
+  };
+  return dupeCount;
+}
