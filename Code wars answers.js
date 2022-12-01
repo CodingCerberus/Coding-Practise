@@ -201,6 +201,18 @@ var summation = function (num) {
   return result
   }
 
+
+
+//Abbreviate a Two Word Name
+
+function abbrevName(name){
+  name = name.toUpperCase();
+
+  name = name.split(' ');
+
+ return `${name[0][0]}.${name[1][0]}`
+};
+
 /////////////////////////////
   //Kyu 7
 /////////////////////////////
