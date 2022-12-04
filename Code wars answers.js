@@ -16,6 +16,81 @@ function positiveSum(arr) {
   }
 
 
+  //Simple multiplication
+
+  function simpleMultiplication(number) {
+    if (number%2 == 0){
+      return number * 8
+    } else {
+      return number * 9
+    }
+  }
+
+
+//  Sum without highest and lowest number
+
+function sumArray(array) {
+  if ((array == []) || (array == null) || (array.length < 3)){
+    return 0
+  } else {
+  let initialValue = 0
+  let sum = 0
+  let maxxC = Math.max(...array)
+  let minnC = Math.min(...array)
+  sum = array.reduce((a, b) => a + b, initialValue) - maxxC - minnC
+  return sum
+    }
+}
+
+//Transportation on vacation
+
+function rentalCarCost(d) {
+  if(d >= 7){
+    return d*40-50
+  } else if (d >= 3){
+    return d*40-20
+  } else {
+    return d*40
+  }
+}
+
+//Reversed sequence
+
+const reverseSeq = n => {
+  let newArr = []
+  for (i = 1; i <= n; i++){
+    newArr.unshift(i)
+  }
+  return newArr
+};
+
+
+//Sum Arrays
+
+function sum (numbers) {
+  if (numbers == []){
+    return 0
+  } else {
+  let sum = 0
+  for (i = 0; i < numbers.length; i++){
+    sum += numbers[i]
+  }
+return sum
+    }
+}
+
+function sum (numbers) {
+  if (numbers == []){
+    return 0
+  } else {
+  const initialValue = 0;
+  const sum = numbers.reduce(
+  (a, b) => a + b, initialValue);
+    return sum
+    }
+}
+
+
 // Remove exclamation marks
 
   function removeExclamationMarks(s) {
@@ -436,3 +511,78 @@ function duplicateCount(text){
   };
   return dupeCount;
 }
+
+
+//Find the unique number
+///array is sliced to reduce size for very long arrays
+///then called only once to make a small Object to get the different values for max and min
+
+function findUniq(arr) {
+  const cake = arr.slice(0, 3);
+  let settled = [...new Set(arr)]
+  
+  let a = Math.min(...settled);
+  let b = Math.max(...settled);
+  
+  let x = cake[0]
+  let y = cake[1]
+  let z = cake[2]
+  
+  if ((x == a)&&(y == a)){
+    return b
+  } else if ((x == b)&&(y == b)){
+    return a
+  } else if ((y == a)&&(z == a)){
+    return b
+  } else if ((y == b)&&(z == b)){
+    return a
+  } else if ((x == a)&&(z == a)){
+    return b
+  } else {
+    return a
+  }
+}
+
+
+//Unique In Order
+
+var uniqueInOrder=function(iterable){
+  if ((typeof iterable) == "string"){
+    //string function
+    let newArr = iterable.split("")
+    for (i = 0; i < newArr.length; i++){
+      if (newArr[i] == newArr[i+1]){
+        newArr.splice([i+1], 1)
+        i--
+      }
+    }
+    return newArr
+  } else {
+    //array function
+    let newArr = iterable
+    for (i = 0; i < newArr.length; i++){
+      if (newArr[i] == newArr[i+1]){
+        newArr.splice([i+1], 1)
+        i--
+      }
+    }
+    return newArr
+  }
+}
+
+///refactored
+var uniqueInOrder=function(iterable){
+  let newArr
+  if ((typeof iterable) == "string"){
+    newArr = iterable.split("")
+  } else {
+    newArr = iterable
+  }
+    for (i = 0; i < newArr.length; i++){
+      if (newArr[i] == newArr[i+1]){
+        newArr.splice([i+1], 1)
+        i--
+      }
+    }
+    return newArr
+  }
