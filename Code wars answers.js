@@ -16,7 +16,26 @@ function positiveSum(arr) {
   }
 
 
-  //Simple multiplication
+//Are You Playing Banjo?
+
+function areYouPlayingBanjo(name) {
+  if ((name[0] == "r")||(name[0] == "R")){
+    return `${name} plays banjo`
+  } else {
+    return `${name} does not play banjo`
+  }
+}
+
+//Find the smallest integer in the array
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
+
+
+//Simple multiplication
 
   function simpleMultiplication(number) {
     if (number%2 == 0){
