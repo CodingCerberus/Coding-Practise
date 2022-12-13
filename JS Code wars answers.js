@@ -343,9 +343,18 @@ function descendingOrder(n){
 }
 
 
+//Testing 1-2-3
+
+var number=function(array){
+  let newArr = array
+  for(i = 0; i < array.length; i++){
+    array[i] = `${i + 1}: ${array[i]}`
+  }
+  return newArr
+}
+
+
 //Growth of a Population
-
-
 
 function nbYear(p0, percent, aug, p) {
   let n = 0;
