@@ -80,3 +80,19 @@ export function countPositivesSumNegatives(input: any) {
   }
   
 }
+
+
+//Calculate BMI
+
+export function bmi(weight: number, height: number): string {
+  let bmiCalc = weight/height**2
+  if (bmiCalc <= 18.5){
+    return "Underweight"
+  } else if (bmiCalc <= 25){
+    return "Normal"
+  } else if (bmiCalc <= 30){
+    return "Overweight"
+  } else if (bmiCalc > 30){
+    return "Obese"
+  }
+}
