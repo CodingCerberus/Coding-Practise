@@ -329,6 +329,77 @@ function abbrevName(name){
  return `${name[0][0]}.${name[1][0]}`
 };
 
+
+
+////this solution works in browser, but not in the tests for some reason.
+
+const reply = {
+  english: 'Welcome',
+  czech: 'Vitejte',
+  danish: 'Velkomst',
+  dutch: 'Welkom',
+  estonian: 'Tere tulemast',
+  finnish: 'Tervetuloa',
+  flemish: 'Welgekomen',
+  french: 'Bienvenue',
+  german: 'Willkommen',
+  irish: 'Failte',
+  italian: 'Benvenuto',
+  latvian: 'Gaidits',
+  lithuanian: 'Laukiamas',
+  polish: 'Witamy',
+  spanish: 'Bienvenido',
+  swedish: 'Valkommen',
+  welsh: 'Croeso'
+  }
+  
+function greet(language) {
+
+  console.log(reply[language])
+  return reply[language]
+  
+}
+
+
+//Twice as old
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - sonYearsOld * 2)
+}
+
+
+//If you can't sleep, just count sheep!!
+
+var countSheep = function (num){
+  let reply = ""
+  for (i = 1; i <= num; i++){
+    reply += `${i} sheep...`
+  }
+  return reply
+}
+
+
+//Remove String Spaces
+
+function noSpace(x){
+  return x.split(' ').join('')
+}
+
+
+//Rock Paper Scissors!
+
+const rps = (p1, p2) => {
+  if (p1 == p2){
+    return "Draw!"
+  } else if (((p1 == "scissors")&&(p2 == "paper")) || ((p1 == "paper") && (p2 == "rock")) || ((p1 == "rock") && (p2 == "scissors"))){
+    return "Player 1 won!"
+  } else {
+    return "Player 2 won!"
+  }
+};
+
+
+
 /////////////////////////////
   //Kyu 7
 /////////////////////////////
