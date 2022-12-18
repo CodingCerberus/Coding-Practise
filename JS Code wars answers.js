@@ -46,6 +46,12 @@ class SmallestIntegerFinder {
 }
 
 
+//Is he gonna survive?
+
+function hero(bullets, dragons){
+  return (bullets / 2 >= dragons) ? true : false
+}
+
 //Simple multiplication
 
   function simpleMultiplication(number) {
