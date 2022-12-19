@@ -431,6 +431,19 @@ var number=function(array){
 }
 
 
+//Sum of the first nth term of Series
+
+function SeriesSum(n){
+  let result = 0
+  let divider = 1
+  for (i = 1; i <= n; i++){
+    result += 1/divider
+    divider += 3
+  }
+  return result.toFixed(2)
+}
+
+
 //Growth of a Population
 
 function nbYear(p0, percent, aug, p) {
