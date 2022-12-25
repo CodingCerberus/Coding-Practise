@@ -15,6 +15,13 @@ function positiveSum(arr) {
     return sum
   }
 
+
+//Beginner Series #4 Cockroach
+
+function cockroachSpeed(s) {
+  return Math.floor(s*10000/360)
+}
+
 //Sum Mixed Array
 
   function sumMix(x){
