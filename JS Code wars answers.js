@@ -15,6 +15,13 @@ function positiveSum(arr) {
     return sum
   }
 
+//Grasshopper - Check for factor
+
+function checkForFactor (base, factor) {
+  return base % factor == 0
+}
+
+
 //The Feast of Many Beasts
 
   function feast(beast, dish) {
