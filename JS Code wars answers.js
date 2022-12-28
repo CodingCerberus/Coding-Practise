@@ -15,6 +15,17 @@ function positiveSum(arr) {
     return sum
   }
 
+//A Needle in the Haystack
+
+function findNeedle(haystack) {
+  for(i = 0; ; i++){
+    if (haystack[i] === 'needle'){
+      return `found the needle at position ${i}`
+    }
+  }
+}
+
+
 //Grasshopper - Check for factor
 
 function checkForFactor (base, factor) {
@@ -495,6 +506,17 @@ var number=function(array){
   return newArr
 }
 
+//Count the divisors of a number
+
+function getDivisorsCnt(n){
+  let factors = 0
+    for(i = 1; i <= n; i++){
+      if(n % i == 0){
+        factors++
+      }
+    }
+  return factors
+}
 
 //Beginner Series #3 Sum of Numbers
 
