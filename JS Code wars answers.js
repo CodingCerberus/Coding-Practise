@@ -498,13 +498,19 @@ function check(a, x) {
 //Will there be enough space?
 
 function enough(cap, on, wait) {
-  if (cap == on + wait){
+  if ((on + wait) < cap ){
     return 0
   } else {
     return on + wait - cap
   }
 }
 
+//You Can't Code Under Pressure #1
+
+function doubleInteger(i) {
+  
+  return i*2;
+}
 
 /////////////////////////////
   //Kyu 7
