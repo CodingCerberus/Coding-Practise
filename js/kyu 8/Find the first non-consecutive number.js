@@ -4,4 +4,11 @@
 //Example [1, 2, 4, 5] returns 4, [1,2,3,4] returns null
 //Psuedo for loop, check if i + 1 == i++, if not return i++
 
-
+function firstNonConsecutive (arr) {
+    for(i = 0; i < arr.length - 1; i++){
+      if((arr[i + 1]) !== (arr[i] + 1)){
+        return arr[i+1]
+      }
+    }
+    return null
+  }
