@@ -1,13 +1,10 @@
 function isSortedAndHow(array) {
   
-  let copyA = array.map(x => x)
+  let copyAB = array.map(x => x).sort((a, b)=> a - b).join(' ')
+  let copyO = array.map(x => x).join(' ')
+  let copyBA = array.map(x => x).sort((a, b)=> b - a).join(' ')
   
-  if(array === copyA.sort((a, b)=> a - b)){
-    return 'yes, ascending'
-  } else if (array === copyA.sort((a, b)=> b - a)){
-    return 'yes, descending'
-  } else {
-    return 'no'
-  }
-  
+  return copyO == copyAB? 'yes, ascending' :
+         copyO == copyBA? 'yes, descending' : 'no'
+    
 }
