@@ -1,0 +1,7 @@
+function last(x){
+
+  x = x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1))
+  
+  return x
+  
+}
