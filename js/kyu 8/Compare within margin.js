@@ -1,11 +1,16 @@
 function closeCompare(a, b, margin){
   
-  if(!margin){
-    return a < b ? -1 :
-           a > b ? 1 : 0
+  if(margin == undefined){
+    margin = 0
   }
-  
-  return ((a < b - margin) || (a > b + margin)) ? 0 :
-         a < b ? -1 : 1
-  
+
+if(margin == 0){
+  if(a == b){
+    return 0
+  }
+}
+
+return Math.abs(a - b) <= margin ? 0 :
+       a < b ? -1 : 1
+
 }
